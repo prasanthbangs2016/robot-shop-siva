@@ -7,7 +7,7 @@ services:
     image: web:v1
     build:
       context: 1-web/
-      dockerfile: DockerFile
+    #   dockerfile: DockerFile
     container_name: web
     depends_on:
     - catalogue
@@ -15,14 +15,14 @@ services:
     image: mongodb:v1
     build:
       context: 2-mongo/
-      dockerfile: DockerFile
+    #   dockerfile: DockerFile
     container_name: mongodb
     
   catalogue:
     image: catalogue:v1
     build:
       context: 3-catalogue/
-      dockerfile: DockerFile
+    #   dockerfile: DockerFile
     container_name: catalogue
     depends_on: 
     - mongodb
