@@ -13,6 +13,10 @@ services:
     - "80:80"
     depends_on:
     - catalogue
+    - user
+    - cart
+    - mysql
+    - shipping 
   mongodb:
     image: mongodb:v1
     build:
