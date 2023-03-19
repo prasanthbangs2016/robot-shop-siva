@@ -38,7 +38,7 @@ services:
       context: 5-user
     container_name: user
     depends_on:
-    - mongod
+    - mongodb
     - redis
 
 
