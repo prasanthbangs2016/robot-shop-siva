@@ -50,6 +50,20 @@ services:
     - redis
     - catalogue
 
+  mysql:
+    image: mysql:v1
+    build:
+      context: 7-mysql
+    container_name: mysql
+
+  shipping: 
+    image: shipping:v1
+    build:
+      context: 8-shipping
+    container_name: shipping
+    depends_on:
+    - mysql
+
 
 
 
