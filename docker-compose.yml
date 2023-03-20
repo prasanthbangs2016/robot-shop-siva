@@ -68,6 +68,14 @@ services:
     depends_on:
     - mysql
 
+  payment: 
+    image: payment:v1
+    build:
+      context: 9-payment
+    container_name: payment
+  
+   
+
 
 
 
