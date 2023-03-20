@@ -53,7 +53,7 @@ services:
     #   dockerfile: DockerFile
     container_name: mongodb
     volumes:
-    - mongodb:/data/db    
+    - robot-shop-siva_mongodb:/data/db    
   catalogue:
     image: catalogue:v1
     build:
@@ -67,7 +67,7 @@ services:
     image: redis
     container_name: redis
     volumes:
-    - redis:/data
+    - robot-shop-siva_redis:/data
 
   user: 
     image: user:v1
@@ -93,7 +93,7 @@ services:
       context: 7-mysql
     container_name: mysql
     volumes:
-    - mysql:/var/lib/mysql
+    - robot-shop-siva_mysql:/var/lib/mysql
 
   shipping: 
     image: shipping:v1
@@ -107,7 +107,7 @@ services:
     image: rabbitmq
     container_name: rabbitmq
     volumes:
-    - rabbitmq:/var/lib/rabbitmq
+    - robot-shop-siva_rabbitmq:/var/lib/rabbitmq
 
   payment: 
     image: payment:v1
