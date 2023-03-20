@@ -68,6 +68,10 @@ services:
     depends_on:
     - mysql
 
+  rabbitmq:
+    image: rabbitmq
+    container_name: rabbitmq
+
   payment: 
     image: payment:v1
     build:
