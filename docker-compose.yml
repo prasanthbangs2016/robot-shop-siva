@@ -2,11 +2,11 @@ version: "3.9"
 networks:
   roboshop:
     driver: bridge
-  volumes:
-#this is equalent to docker volume create and these are named volumes
-#anonymous volume, docker wont be having control
+  volumess:
+#this is equalent to docker volumes create and these are named volumess
+#anonymous volumes, docker wont be having control
 #docker run -v /home/ec2-user/mysql:/var/lib/mysql
-#docker volumes create mysql (to this docker will have control to manage volumes)
+#docker volumess create mysql (to this docker will have control to manage volumess)
     mysql:
       driver: local
       driver_opts:
@@ -52,7 +52,7 @@ services:
       context: 2-mongo/
     #   dockerfile: DockerFile
     container_name: mongodb
-    volume:
+    volumes:
     - mongodb:/data/db    
   catalogue:
     image: catalogue:v1
@@ -66,7 +66,7 @@ services:
   redis:
     image: redis
     container_name: redis
-    volume:
+    volumes:
     - redis:/data
 
   user: 
@@ -92,7 +92,7 @@ services:
     build:
       context: 7-mysql
     container_name: mysql
-    volume:
+    volumes:
     - mysql:/var/lib/mysql
 
   shipping: 
@@ -106,7 +106,7 @@ services:
   rabbitmq:
     image: rabbitmq
     container_name: rabbitmq
-    volume:
+    volumes:
     - rabbitmq:/var/lib/rabbitmq
 
   payment: 
