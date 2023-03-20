@@ -10,27 +10,27 @@ volumes:
   mysql:
     driver: local
     driver_opts:
-      o: bind
-      type: none
-      device: /home/ec2-user/mysql
+      o: 'bind'
+      type: 'none'
+      device: '/home/ec2-user/mysql'
   redis:
     driver: local
     driver_opts:
-      o: bind
-      type: none
-      device: /home/ec2-user/redis
+      o: 'bind'
+      type: 'none'
+      device: '/home/ec2-user/redis'
   rabbitmq:
     driver: local
     driver_opts:
-      o: bind
-      type: none
-      device: /home/ec2-user/rabbitmq
+      o: 'bind'
+      type: 'none'
+      device: '/home/ec2-user/rabbitmq'
   mongodb:
     driver: local
     driver_opts:
       o: bind
       type: none
-      device: /home/ec2-user/mongodb
+      device: '/home/ec2-user/mongodb'
 
 
 services:
